@@ -1,0 +1,44 @@
+body {
+    color: rgb(0, 255, 0);
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+    padding: 10px 10px 0px 10px;
+}
+.cursor {
+    align-items: center;
+    gap: 2px;
+}
+.cursor::after {
+    content: "";
+    width: 2px;
+    height: 20px;
+    background: rgb(0, 255, 0, 1);
+    z-index: 30;
+    display: flex;
+    animation: cursor-blink 1s steps(2) infinite;
+    position: relative;
+    bottom: -20%;
+}
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.flexed {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2px;
+}
+.invisible {
+    visibility: hidden;
+}
